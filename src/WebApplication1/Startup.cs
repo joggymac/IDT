@@ -32,6 +32,12 @@ namespace WebApplication1
             {
                 await context.Response.WriteAsync("Hello World!");
             });
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+        }
         }
     }
-}
+
